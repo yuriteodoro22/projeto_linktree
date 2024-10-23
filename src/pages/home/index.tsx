@@ -1,6 +1,7 @@
 import { Social } from "../../components/Social"
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaWhatsapp,FaUser } from "react-icons/fa"
 import {db} from '../../services/firebaseConnection'
 import { 
     collection, 
@@ -83,6 +84,11 @@ export function Home(){
 
     return(
         <div className="flex flex-col w-full py-4 items-center justify-center">
+            <div className="w-full flex flex-row justify-end">
+                <Link className=" flex gap-3 px-5" to={'/login'}>
+                   <p className=" text-white">Login</p>
+                </Link>
+            </div>
             <h1 className="md:text-4xl text-3xl font-bold text-white mt-20">Larissa Fer Make</h1>
             <span className="text-gray-50 mb-5 mt-3">Veja meus links👇</span>
 
