@@ -39,13 +39,13 @@ export function Login(){
 
             <form onSubmit={handleSubmit} className="w-full max-w-xl flex flex-col px-2">
                 <Input
-                placeholder="Digite seu email..." //O input está recebendo as propreidades que passamos do tipo dele no componente 
+                placeholder="Digite seu email..." 
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value) }
                 />
                  <Input
-                placeholder="**********" //O input está recebendo as propreidades que passamos do tipo dele no componente 
+                placeholder="**********" 
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value) }

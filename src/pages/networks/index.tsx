@@ -3,9 +3,9 @@ import { Input } from "../../components/input"
 import { useState, FormEvent, useEffect } from "react"
 import { db } from '../../services/firebaseConnection'
 import { 
-    setDoc, // criar um documento mas nos passamos o id dele 
+    setDoc, 
     doc, 
-    getDoc // bscar uma vez um unico documento
+    getDoc 
 } from "firebase/firestore"
 
 export function Networks(){

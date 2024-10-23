@@ -6,11 +6,7 @@ import { Link } from "react-router-dom"
 export function Header(){
 
    async function handleLogout(){
-       await signOut(auth); //função para deslogar usuario do banco de dados
-       //utilizamos o signOut da propria biblioteca do firebase que faz essa 
-       //função, como ele é uma promisse usamos ele como uma função assincrona
-       // e utilizando o await para ele aguardar o signOut receber a resposta 
-       // de que o usuario foi deslogado antes de prosseguir
+       await signOut(auth); 
     }
 
     return(

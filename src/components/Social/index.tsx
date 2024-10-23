@@ -1,6 +1,6 @@
-import { ReactNode } from "react"; // importando o icone pra tipar ele e dizer que o nosso social irá receber um filho que será um icone
+import { ReactNode } from "react"; 
 
-interface SocialProps{ //tipando as propriedades que iremos receber de outra pagina
+interface SocialProps{ 
     url: string;
     children: ReactNode;
 }
@@ -9,8 +9,8 @@ export function Social({url, children}: SocialProps){
     return(
         <a
         href={url}
-        rel="noopenner noreferrer" //passando que é uma url externa
-        target="_blank" // dizendo para abrir em uma nova aba
+        rel="noopenner noreferrer" 
+        target="_blank" 
         >
            {children}
         </a>

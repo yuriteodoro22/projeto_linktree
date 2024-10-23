@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa"
 import {db} from '../../services/firebaseConnection'
 import { 
-    collection, //acessa e cria uma collection
+    collection, 
     orderBy,
-    query, //Serve para fazer uma busca ordenada, onde ordenamos as propriedades que vamos buscar do jeito que quisermos
-    getDocs, //Serve para pegar mais de um item no banco de dados 
+    query, 
+    getDocs,
     getDoc,
     doc, 
      } from "firebase/firestore";
@@ -34,9 +34,8 @@ export function Home(){
     /*BUSCANDO LINKS NO BANCO DE DADOS*/
     useEffect(() => {
         function LoadLinks(){
-            const linksRef = collection(db, 'links')//criando uma variavel que acessar a colection links que criamos
-            const queryRef = query(linksRef, orderBy("created", 'asc'))//Query para fazer uma busca na collection links do banco de dados, e o orderby para ordernar os dados que vamos receber
-            // baseado na propriedade created que é a data de criação, e apos isso colocamos ''asc'' que significa ascendente , então vai ser ordenar ascendentemente
+            const linksRef = collection(db, 'links')
+            const queryRef = query(linksRef, orderBy("created", 'asc'))
 
             getDocs(queryRef)
             .then((snapshot) =>{
@@ -103,7 +102,7 @@ export function Home(){
              </section>
                ))}
 
-               {socialLinks && Object.keys(socialLinks).length > 0 && ( //Objetct.Keys serve para verificar se tem alguma propriedade dentro do nosso objeto de socialLinks
+               {socialLinks && Object.keys(socialLinks).length > 0 && ( 
                 
                 <footer className="flex justify-center gap-3 my-4">
                     <Social url={socialLinks?.facebook}>
