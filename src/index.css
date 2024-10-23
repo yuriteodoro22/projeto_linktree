@@ -4,5 +4,7 @@
 
 body{
     min-height: 100vh;
-    background: linear-gradient(#232630, #050507);
+    background: linear-gradient(#ff4ee9, #ffffff);
+    background-image: url('./assets/bg3.jpg');
+    background-size: cover;
 }
