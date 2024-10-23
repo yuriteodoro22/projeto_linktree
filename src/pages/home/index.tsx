@@ -1,7 +1,7 @@
 import { Social } from "../../components/Social"
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { FaFacebook, FaInstagram, FaWhatsapp,FaUser } from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa"
 import {db} from '../../services/firebaseConnection'
 import { 
     collection, 
